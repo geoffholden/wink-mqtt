@@ -42,6 +42,9 @@ tail.on('line', function(data) {
     if (data.indexOf('state changed in device') > 0) {
         checkDatabase();
     }
+	if (data.indexOf('Received Notification Report') > 0) {
+        checkDatabase();
+    }
 });
 
 tail.on('error', function(data) {
